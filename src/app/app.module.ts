@@ -21,7 +21,10 @@ import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { CitizenComponent } from './pages/citizen/citizen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { AngularMaterialModule } from './angular-material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,8 @@ import { MatSliderModule } from '@angular/material/slider';
     LoadingComponent,
     ExternalApiComponent,
     ErrorComponent,
-    CitizenComponent
+    CitizenComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,10 @@ import { MatSliderModule } from '@angular/material/slider';
       },
     }),
     BrowserAnimationsModule,
-    MatSliderModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    AngularMaterialModule,
   ],
   providers: [
     {
