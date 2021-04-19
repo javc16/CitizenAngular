@@ -40,7 +40,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'editcitizen',
+    path: 'editcitizen/:id',
     component: EditcitizenComponent,
     canActivate: [AuthGuard],
   },

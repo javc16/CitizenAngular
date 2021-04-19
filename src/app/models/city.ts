@@ -1,4 +1,4 @@
-export interface City{
+export class City{
     id:number;
     name:string;
     description:string;

@@ -12,7 +12,11 @@ export class CitizenComponent implements OnInit {
  @Output('statusSlectedChange') statusSelectedChange: EventEmitter<any> = new EventEmitter(); 
   citizens: Citizen[];
   displayedColumns: string[] = ['id', 'name', 'lastName', 'phoneNumber','action'];
-  constructor(private citizenService: CitizenService,private router: Router) { }
+  
+  constructor(
+    private citizenService: CitizenService,
+    private router: Router,
+    ) { }
 
 
   ngOnInit() {
@@ -23,7 +27,7 @@ export class CitizenComponent implements OnInit {
 
   edit(citizen:Citizen){
     const id = citizen.id;
-    this.router.navigate(['editcitizen'],{ queryParams: { id: citizen.id}});
+    this.router.navigate(['editcitizen',id]);
   }
 
   
