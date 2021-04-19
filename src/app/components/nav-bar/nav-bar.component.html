@@ -1,8 +1,7 @@
 <div class="nav-container">
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
-      <div class="navbar-brand logo"></div>
-      <button
+      <a href="#" class="navbar-left"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/dei1u8m-c276a5ba-b1c6-49af-b39d-6c9569efbb09.png/v1/fill/w_894,h_894,strp/google_photos_logo_by_pachi3p_dei1u8m-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMDAwIiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kZWkxdThtLWMyNzZhNWJhLWIxYzYtNDlhZi1iMzlkLTZjOTU2OWVmYmIwOS5wbmciLCJ3aWR0aCI6Ijw9MTAwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.mkGDKKehQxRC3h_3uxAuvQmvxVu-iUMge2ieo7PkpTA" height="40" alt=""></a>      <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -25,11 +24,11 @@
             <a routerLink="/" class="nav-link">Home</a>
           </li>
           <li class="nav-item" *ngIf="auth.isAuthenticated$ | async">
-            <a routerLink="citizen" class="nav-link">Testing</a>
+            <a routerLink="citizen" class="nav-link">Citizens</a>
           </li>
           <li class="nav-item" *ngIf="auth.isAuthenticated$ | async">
-            <a routerLink="external-api" class="nav-link">External API</a>
-          </li>
+            <a routerLink="citizen" class="nav-link">Cities</a>
+          </li>    
         </ul>
 
         <ul class="navbar-nav d-none d-md-block">

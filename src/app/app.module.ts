@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AngularMaterialModule } from './angular-material.module';
+import { CitiesComponent } from './pages/cities/cities.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { AngularMaterialModule } from './angular-material.module';
     ExternalApiComponent,
     ErrorComponent,
     CitizenComponent,
+    CitiesComponent,
     
   ],
   imports: [
