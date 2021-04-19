@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter,OnInit, Output } from '@angular/core';
+import { CitiesService } from '../../services/cities/cities.service'
+import { City } from '../../models/city'
 
 @Component({
   selector: 'app-cities',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {
+  @Output('statusSlectedChange') statusSelectedChange: EventEmitter<any> = new EventEmitter(); 
+  city: City[];
+  displayedColumns: string[] = ['id', 'name', 'description','action'];
+  constructor(private cityservice: CitiesService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.cityservice.getData().subscribe((res: any[])=>{
+      this.city= res;
+    })  
   }
+
+
 
 }

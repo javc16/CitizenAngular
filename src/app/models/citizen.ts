@@ -4,4 +4,5 @@ export interface Citizen{
     name:string;
     lastName:string;
     phoneNumber:string;
+    
   }

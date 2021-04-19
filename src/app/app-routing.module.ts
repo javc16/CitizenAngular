@@ -6,6 +6,8 @@ import { ExternalApiComponent } from './pages/external-api/external-api.componen
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthGuard } from '@auth0/auth0-angular';
 import { CitizenComponent } from './pages/citizen/citizen.component';
+import { CitiesComponent } from './pages/cities/cities.component';
+import { EditcitizenComponent } from './pages/citizen/editcitizen/editcitizen.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,16 @@ const routes: Routes = [
   {
     path: 'citizen',
     component: CitizenComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'cities',
+    component: CitiesComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'editcitizen',
+    component: EditcitizenComponent,
     canActivate: [AuthGuard],
   },
 ];

@@ -26,6 +26,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AngularMaterialModule } from './angular-material.module';
 import { CitiesComponent } from './pages/cities/cities.component';
+import { EditcitizenComponent } from './pages/citizen/editcitizen/editcitizen.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +44,7 @@ import { CitiesComponent } from './pages/cities/cities.component';
     ErrorComponent,
     CitizenComponent,
     CitiesComponent,
+    EditcitizenComponent,
     
   ],
   imports: [
@@ -60,6 +65,7 @@ import { CitiesComponent } from './pages/cities/cities.component';
     MatPaginatorModule,
     MatSortModule,
     AngularMaterialModule,
+    NgxDatatableModule,
   ],
   providers: [
     {
