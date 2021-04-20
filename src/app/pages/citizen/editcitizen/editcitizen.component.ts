@@ -49,7 +49,8 @@ export class EditcitizenComponent implements OnInit {
       this.selectedLastName = res.data.lastName;             
       this.selectedDNI = res.data.dni;
       this.selectedPhoneNumber = res.data.phoneNumber; 
-      this.selectedCity = res.data.selectedCity;     
+      this.selectedCity = res.data.selectedCity;
+      console.log(this.selectedCity);     
     });
   }
 
