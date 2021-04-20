@@ -44,12 +44,6 @@ export class CitizenComponent implements OnInit {
         })  
       });     
   }
-
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
-  }
-  
-
 }
 
 
