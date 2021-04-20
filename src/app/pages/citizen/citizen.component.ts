@@ -2,6 +2,8 @@ import { Component, EventEmitter,OnInit, Output } from '@angular/core';
 import { CitizenService } from '../../services/citizen/citizen.service'
 import { Citizen } from '../../models/citizen'
 import {Router} from '@angular/router'
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-citizen',
   templateUrl: './citizen.component.html',
@@ -15,6 +17,7 @@ export class CitizenComponent implements OnInit {
   constructor(
     private citizenService: CitizenService,
     private router: Router,
+    private toastr: ToastrService
     ) { }
 
 
@@ -42,6 +45,9 @@ export class CitizenComponent implements OnInit {
       });     
   }
 
+  showSuccess() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
   
 
 }

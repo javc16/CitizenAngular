@@ -30,6 +30,7 @@ import { EditcitizenComponent } from './pages/citizen/editcitizen/editcitizen.co
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FormsModule } from '@angular/forms';
 import { CreatecitizenComponent } from './pages/citizen/createcitizen/createcitizen.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -71,6 +72,7 @@ import { CreatecitizenComponent } from './pages/citizen/createcitizen/createciti
     AngularMaterialModule,
     NgxDatatableModule,
     FormsModule,
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     {
