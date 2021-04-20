@@ -61,7 +61,9 @@ export class EditcitizenComponent implements OnInit {
         if (res) {
           
         }else{
-          this.router.navigate(['citizen']);
+          this.router.navigate(['citizen']).then(() => {
+            window.location.reload();
+          });
         }       
 
       });

@@ -29,7 +29,7 @@ export class CitizenService {
     return this.http.post(this.url, citizen);
   }
 
-  deleteCitizen(id: number, citizen:Citizen ){
-    return this.http.put(this.url+'/'+id, citizen);
+  deleteCitizen(id: number ){
+    return this.http.delete(this.url+'/'+id);
   }
 }

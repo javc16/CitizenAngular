@@ -53,11 +53,11 @@ selectedChangeCity(){
    debugger;
     this.citizenService.createCitizen(this.citizen)
       .subscribe((res: any) => {
-        
-          this.router.navigate(['citizen']);
-             
-
-      });
      
+      });
+      this.router.navigate(['citizen']).then(() => {
+        window.location.reload();
+      });
+ 
   }
 }

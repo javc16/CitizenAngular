@@ -33,6 +33,15 @@ export class CitizenComponent implements OnInit {
     this.router.navigate(['createcitizen']);
   }
 
+  delete(citizen:Citizen) {  
+    this.citizenService.deleteCitizen(citizen.id)
+      .subscribe((res: any) => {
+        this.citizenService.getData().subscribe((res: any[])=>{
+          this.citizens= res;
+        })  
+      });     
+  }
+
   
 
 }
