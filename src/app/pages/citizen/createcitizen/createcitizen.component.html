@@ -1,0 +1,60 @@
+<h1>Create Citizen</h1>
+<form name="myForm">
+<div class="form-group">
+    <mat-label>Name: </mat-label><tr></tr>
+
+    <input type="text" class="form-control" [(ngModel)]="name">   
+
+</div>
+<tr></tr>
+<div class="form-group">
+    <mat-label>Last Name: </mat-label><tr></tr>
+
+    <input type="text" class="form-control" [(ngModel)]="lastName">   
+
+</div>
+<tr></tr>
+<div class="form-group">
+    <mat-label>DNI: </mat-label><tr></tr>
+
+    <input type="text" class="form-control" [(ngModel)]="DNI" placeholder="Enter your DNI of 13 digits">   
+</div>
+<tr></tr>
+<div class="form-group">
+    <mat-label>Phone Number: </mat-label><tr></tr>
+
+    <input type="text" class="form-control" [(ngModel)]="phoneNumber" placeholder="Enter your phone Number of 8 digits">   
+</div>
+<tr></tr>
+<div class="form-group">
+<label for="singleSelect"> Select your Native City: </label><br>
+<select width="8" class="form-control" id="allocation-algorithm" 
+[(ngModel)]="selectedCity">
+      <option *ngFor="let option of city" [value]="option.id">{{option.description}}</option>    
+</select>
+</div>
+</form>
+
+
+
+<!-- <div class="p-10" fxFlex.gt-sm="17" fxFlex.gt-xs="50%" fxFlex="100%">
+    <mat-form-field>
+        <mat-label>Cuenta</mat-label>
+        <mat-icon class="editIconColor" matSuffix>credit_card</mat-icon>
+        <mat-select [(value)]="selectedAccount" (selectionChange)="selectedChangeAccount()">
+            <mat-option *ngFor="let option of Accounts" [value]="option.Codigo">{{option.Codigo+" "+ option.Descripcion}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div> -->
+
+<mat-card-actions>
+    
+
+    <button mat-raised-button color="warn" mattooltip="df" type="button" (click)="cancel()">
+        <i class='fa fa-times fa-fw'></i> Cancel
+    </button>
+    <button mat-raised-button color="accent" class="marginButton" mattooltip="df" type="button" (click)="create()"
+        >
+        <i class='fa fa-save fa-fw'></i> Save
+    </button>
+</mat-card-actions>

@@ -8,6 +8,7 @@ import { AuthGuard } from '@auth0/auth0-angular';
 import { CitizenComponent } from './pages/citizen/citizen.component';
 import { CitiesComponent } from './pages/cities/cities.component';
 import { EditcitizenComponent } from './pages/citizen/editcitizen/editcitizen.component';
+import { CreatecitizenComponent } from './pages/citizen/createcitizen/createcitizen.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'editcitizen/:id',
     component: EditcitizenComponent,
+    canActivate: [AuthGuard],
+  },  {
+    path: 'createcitizen',
+    component: CreatecitizenComponent,
     canActivate: [AuthGuard],
   },
 ];

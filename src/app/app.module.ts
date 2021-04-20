@@ -28,6 +28,9 @@ import { AngularMaterialModule } from './angular-material.module';
 import { CitiesComponent } from './pages/cities/cities.component';
 import { EditcitizenComponent } from './pages/citizen/editcitizen/editcitizen.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { FormsModule } from '@angular/forms';
+import { CreatecitizenComponent } from './pages/citizen/createcitizen/createcitizen.component';
+
 
 
 @NgModule({
@@ -45,7 +48,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     CitizenComponent,
     CitiesComponent,
     EditcitizenComponent,
-    
+    CreatecitizenComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -66,6 +70,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     MatSortModule,
     AngularMaterialModule,
     NgxDatatableModule,
+    FormsModule,
   ],
   providers: [
     {

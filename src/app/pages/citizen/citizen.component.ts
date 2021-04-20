@@ -2,7 +2,6 @@ import { Component, EventEmitter,OnInit, Output } from '@angular/core';
 import { CitizenService } from '../../services/citizen/citizen.service'
 import { Citizen } from '../../models/citizen'
 import {Router} from '@angular/router'
-
 @Component({
   selector: 'app-citizen',
   templateUrl: './citizen.component.html',
@@ -11,7 +10,7 @@ import {Router} from '@angular/router'
 export class CitizenComponent implements OnInit {
  @Output('statusSlectedChange') statusSelectedChange: EventEmitter<any> = new EventEmitter(); 
   citizens: Citizen[];
-  displayedColumns: string[] = ['id', 'name', 'lastName', 'phoneNumber','action'];
+  displayedColumns: string[] = ['id', 'name', 'lastName', 'phoneNumber','nativeCity','action'];
   
   constructor(
     private citizenService: CitizenService,
@@ -28,6 +27,10 @@ export class CitizenComponent implements OnInit {
   edit(citizen:Citizen){
     const id = citizen.id;
     this.router.navigate(['editcitizen',id]);
+  }
+
+  create(){
+    this.router.navigate(['createcitizen']);
   }
 
   

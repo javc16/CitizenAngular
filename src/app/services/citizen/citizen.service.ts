@@ -16,4 +16,20 @@ export class CitizenService {
   getData(): Observable<Citizen[]> {
     return this.http.get<Citizen[]>(this.url);
   }
+
+  getCitizenById(id: number){
+    return this.http.get<Citizen>(this.url+'/' +id);
+  }
+
+  updateCitizen(id: number, citizen:Citizen ){
+    return this.http.put(this.url+'/'+id, citizen);
+  }
+
+  createCitizen(citizen: Citizen) {
+    return this.http.post(this.url, citizen);
+  }
+
+  deleteCitizen(id: number, citizen:Citizen ){
+    return this.http.put(this.url+'/'+id, citizen);
+  }
 }

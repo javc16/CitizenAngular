@@ -1,1 +1,38 @@
-<p>editcitizen works!</p>
+<h1>Edit Citizen</h1>
+
+<div>
+    <mat-label>Name: </mat-label>
+    <h4>{{selectedName}}</h4>
+
+</div>
+<tr></tr>
+<div>
+    <mat-label>LastName: </mat-label>
+    <h4>{{selectedLastName}}</h4>  
+</div>
+<div>
+    <mat-label>DNI: </mat-label>
+    <h4>{{selectedDNI}}</h4>  
+</div>
+<tr></tr>
+<div>
+    <mat-label>Phone Number: </mat-label>
+    <input type="text" [(ngModel)]="selectedPhoneNumber">   
+</div>
+
+
+
+
+
+<mat-card-actions>
+    
+
+    <button mat-raised-button color="warn" mattooltip="df" type="button" (click)="cancel()">
+        <i class='fa fa-times fa-fw'></i> Cancel
+    </button>
+    <button mat-raised-button color="accent" class="marginButton" mattooltip="df" type="button" (click)="update()"
+        >
+        <i class='fa fa-save fa-fw'></i> Save
+    </button>
+</mat-card-actions>
+
