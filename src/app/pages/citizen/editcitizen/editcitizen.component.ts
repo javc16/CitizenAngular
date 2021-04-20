@@ -1,6 +1,8 @@
 import { Component,  OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Citizen } from 'src/app/models/citizen';
+import { City } from 'src/app/models/city';
+import { CitiesService } from 'src/app/services/cities/cities.service';
 import { CitizenService } from 'src/app/services/citizen/citizen.service';
 
 @Component({
@@ -14,13 +16,16 @@ export class EditcitizenComponent implements OnInit {
   selectedDNI:string;
   selectedPhoneNumber:string;
   citizen:Citizen;
-  
+  city: City[];
+  selectedCity:number;
   
 
   constructor(
     activatedRoute:ActivatedRoute,
     private citizenService: CitizenService,
     private router: Router,
+    private cityservice: CitiesService,
+
     ) 
     { 
     activatedRoute.params.subscribe(params => {
@@ -30,7 +35,9 @@ export class EditcitizenComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+    this.cityservice.getData().subscribe((res: any[])=>{
+      this.city= res;
+    }) 
   }
 
  
@@ -53,7 +60,8 @@ export class EditcitizenComponent implements OnInit {
   }
   
   update() {  
-    this.citizen.phoneNumber = this.selectedPhoneNumber;   
+    this.citizen.phoneNumber = this.selectedPhoneNumber;
+    this.citizen.idNativeCity = this.selectedCity;   
    debugger;
     this.citizenService.updateCitizen(this.citizen.id, this.citizen)
       .subscribe((res: any) => {

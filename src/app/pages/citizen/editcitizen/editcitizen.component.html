@@ -10,6 +10,7 @@
     <mat-label>LastName: </mat-label>
     <h4>{{selectedLastName}}</h4>  
 </div>
+<tr></tr>
 <div>
     <mat-label>DNI: </mat-label>
     <h4>{{selectedDNI}}</h4>  
@@ -17,7 +18,15 @@
 <tr></tr>
 <div>
     <mat-label>Phone Number: </mat-label>
-    <input type="text" [(ngModel)]="selectedPhoneNumber">   
+    <input name="phoneNumber" type="text" [(ngModel)]="selectedPhoneNumber">   
+</div>
+<tr></tr>
+<div class="form-group">
+<label for="singleSelect"> Select your Native City: </label><br>
+<select name="city" width="8" class="form-control" id="allocation-algorithm" 
+[(ngModel)]="selectedCity">
+      <option *ngFor="let option of city" [value]="option.id">{{option.description}}</option>    
+</select>
 </div>
 
 
