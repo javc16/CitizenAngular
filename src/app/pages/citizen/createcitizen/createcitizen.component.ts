@@ -55,13 +55,13 @@ selectedChangeCity(){
    debugger;
     this.citizenService.createCitizen(this.citizen)
       .subscribe((res: any) => {
-        if(res && res.includes("Added")){
-          this.toastr.success(res, 'Citizen');
+        if(res && res.message.includes("Added")){
+          this.toastr.success(res.message, 'Citizen');
           this.router.navigate(['citizen']).then(() => {
             window.location.reload();
           });
         }else{
-          this.toastr.error(res, 'Citizen');
+          this.toastr.error(res.message, 'Citizen');
 
         }
       });
