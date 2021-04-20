@@ -55,7 +55,7 @@ selectedChangeCity(){
    debugger;
     this.citizenService.createCitizen(this.citizen)
       .subscribe((res: any) => {
-        if(res=="Added sucefully"){
+        if(res && res.includes("Added")){
           this.toastr.success(res, 'Citizen');
           this.router.navigate(['citizen']).then(() => {
             window.location.reload();
