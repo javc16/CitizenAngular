@@ -10,7 +10,7 @@ import { City } from '../../models/city'
 export class CitiesComponent implements OnInit {
   @Output('statusSlectedChange') statusSelectedChange: EventEmitter<any> = new EventEmitter(); 
   city: City[];
-  displayedColumns: string[] = ['id', 'name', 'description','action'];
+  displayedColumns: string[] = ['id', 'name', 'description'];
   constructor(private cityservice: CitiesService) { }
 
   ngOnInit() {
