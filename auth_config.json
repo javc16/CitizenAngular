@@ -1,0 +1,8 @@
+{
+  "domain": "dev-x43m2k2s.us.auth0.com",
+  "clientId": "0diJw3tlcSoqc4X7RFhVv3eh5YuMzztU",
+  "audience": "https://localhost:44305",
+  "apiUri": "http://localhost:3001",
+  "appUri": "http://localhost:4200",
+  "errorPath": "/error"
+}
