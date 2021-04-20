@@ -37,11 +37,11 @@ export class EditcitizenComponent implements OnInit {
 
   getCitizenById(id: number) {
     this.citizenService.getCitizenById(id).subscribe((res: any) => {
-      this.citizen = res;
-      this.selectedName = res.name; 
-      this.selectedLastName = res.lastName;             
-      this.selectedDNI = res.dni;
-      this.selectedPhoneNumber = res.phoneNumber;      
+      this.citizen = res.data;
+      this.selectedName = res.data.name; 
+      this.selectedLastName = res.data.lastName;             
+      this.selectedDNI = res.data.dni;
+      this.selectedPhoneNumber = res.data.phoneNumber;      
     });
   }
 
