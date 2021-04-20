@@ -57,14 +57,15 @@ selectedChangeCity(){
       .subscribe((res: any) => {
         if(res=="Added sucefully"){
           this.toastr.success(res, 'Citizen');
+          this.router.navigate(['citizen']).then(() => {
+            window.location.reload();
+          });
         }else{
           this.toastr.error(res, 'Citizen');
 
         }
       });
-      this.router.navigate(['citizen']).then(() => {
-        window.location.reload();
-      });
+  
  
   }
 }
