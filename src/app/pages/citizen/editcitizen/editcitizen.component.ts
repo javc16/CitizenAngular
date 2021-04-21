@@ -71,12 +71,12 @@ export class EditcitizenComponent implements OnInit {
         
         if (res && res.message.include("sucefully")) {
           this.toastr.success(res.message, 'Citizen');
-
-        }else{
-          this.toastr.warning(res.message, 'Citizen');
           this.router.navigate(['citizen']).then(() => {
             window.location.reload();
           });
+        }else{
+          this.toastr.warning(res.message, 'Citizen');
+         
         }       
 
       });
