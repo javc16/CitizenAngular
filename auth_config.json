@@ -1,7 +1,7 @@
 {
   "domain": "dev-x43m2k2s.us.auth0.com",
   "clientId": "cXSWBK8pXKBznAwWT1hy7W7lZJtU5fxv",
-  "audience": "https://localhost:44305",
+  "audience": "https://localhost:44304",
   "apiUri": "http://localhost:3001",
   "appUri": "https://master.d1aa0w36qdbm40.amplifyapp.com/",
   "errorPath": "/error"
