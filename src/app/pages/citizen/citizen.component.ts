@@ -40,8 +40,9 @@ export class CitizenComponent implements OnInit {
     this.citizenService.deleteCitizen(citizen.id)
       .subscribe((res: any) => {
         this.citizenService.getData().subscribe((res: any[])=>{
-          this.citizens= res;
-        })  
+          this.citizens= res;          
+        })
+        this.toastr.success(res.message, 'Citizen');  
       });     
   }
 }

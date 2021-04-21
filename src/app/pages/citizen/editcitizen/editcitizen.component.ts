@@ -4,6 +4,7 @@ import { Citizen } from 'src/app/models/citizen';
 import { City } from 'src/app/models/city';
 import { CitiesService } from 'src/app/services/cities/cities.service';
 import { CitizenService } from 'src/app/services/citizen/citizen.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-editcitizen',
@@ -25,7 +26,7 @@ export class EditcitizenComponent implements OnInit {
     private citizenService: CitizenService,
     private router: Router,
     private cityservice: CitiesService,
-
+    private toastr: ToastrService,
     ) 
     { 
     activatedRoute.params.subscribe(params => {
@@ -68,9 +69,11 @@ export class EditcitizenComponent implements OnInit {
     this.citizenService.updateCitizen(this.citizen.id, this.citizen)
       .subscribe((res: any) => {
         
-        if (res) {
-          
+        if (res && res.message.include("sucefully")) {
+          this.toastr.success(res.message, 'Citizen');
+
         }else{
+          this.toastr.warning(res.message, 'Citizen');
           this.router.navigate(['citizen']).then(() => {
             window.location.reload();
           });
