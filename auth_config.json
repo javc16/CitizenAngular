@@ -1,7 +1,7 @@
 {
   "domain": "dev-x43m2k2s.us.auth0.com",
   "clientId": "cXSWBK8pXKBznAwWT1hy7W7lZJtU5fxv",
-  "audience": " https://m8a2ffbxb4.execute-api.us-east-1.amazonaws.com/Prod",
+  "audience": "https://6r7jd9lz8a.execute-api.us-east-1.amazonaws.com/Prod",
   "apiUri": "http://localhost:3001",
   "appUri": "https://master.d1aa0w36qdbm40.amplifyapp.com/",
   "errorPath": "/error"
