@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://6r7jd9lz8a.execute-api.us-east-1.amazonaws.com/Prod",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
