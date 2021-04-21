@@ -69,7 +69,7 @@ export class EditcitizenComponent implements OnInit {
     this.citizenService.updateCitizen(this.citizen.id, this.citizen)
       .subscribe((res: any) => {
         
-        if (res && res.message.include("sucefully")) {
+        if (res && res.message.includes("sucefully")) {
           this.toastr.success(res.message, 'Citizen');
           this.router.navigate(['citizen']).then(() => {
             window.location.reload();
