@@ -10,7 +10,7 @@ export class CitiesService {
   private url:string;
   constructor(private http: HttpClient) 
   {
-    this.url =  "https://localhost:44305/api/nativecity";
+    this.url =  "https://localhost:44304/api/nativecity";
   }
 
   getData(): Observable<City[]> {

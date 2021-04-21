@@ -10,7 +10,7 @@ export class CitizenService {
  private url:string;
   constructor(private http: HttpClient) 
   {
-    this.url =  "https://localhost:44305/api/citizen";
+    this.url =  "https://localhost:44304/api/citizen";
   }
 
   getData(): Observable<Citizen[]> {
